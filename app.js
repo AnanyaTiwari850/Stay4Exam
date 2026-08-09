@@ -40,13 +40,13 @@ app.use(express.static(path.join(__dirname,"/public")));
 const sessionOptions = {
    secret: "mysupersecretcode",
    resave: false,
-   saveUnintialized: true,
+   saveUninitialized: true,
    cookie:{
       expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
       maxAge: 7 * 24 * 60 * 60 * 1000,
       httpOnly:true
    },
-};
+}; 
 
 app.get("/",(req,res)=> {
     res.send("Hi , I am root");
@@ -57,7 +57,7 @@ app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
-passport.use(new LocalStrategy(User.authenticate));
+passport.use(new LocalStrategy(User.authenticate()));
 
 
 passport.serializeUser(User.serializeUser());
@@ -69,16 +69,6 @@ app.use((req,res,next) =>{
    next();
 });
 
-
-// app.get("/demouser", async(req,res) =>{
-//    let fakeUser = new User({
-//       email:"student@gmail.com",
-//       username: "delta-student"
-//    });
-
-//   let registeredUser = await User.register(fakeUser,"helloworld");
-//   res.send(registeredUser);
-// })
 
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
