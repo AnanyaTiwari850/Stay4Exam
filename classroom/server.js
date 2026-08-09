@@ -1,9 +1,13 @@
 const express = require("express");
 const app = express();
+const session = require("express-session");
+const flash = require("connect-flash");
 
 
-app.get("/",(req,res) => {
-    res.send("Hi i'm root!");
+app.use(session({secret: "mysupersecretstring"}));
+
+app.get("/test", (req,res) => {
+    res.send("test successful");
 })
 
 
