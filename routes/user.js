@@ -20,7 +20,7 @@ router.post("/signup",
                 if(err) {
                     return next(err);
                 }
-                req.flash("success", "Welcome to NextStay!");
+                req.flash("success", "Welcome to Stay4Exam!");
                 res.redirect("/listings");
             })
       }catch(e){
@@ -42,7 +42,7 @@ router.post("/login",
         failureFlash:true,
     }),
     async(req,res) => {
-        req.flash("success","Welcome back to NextStay!");
+        req.flash("success","Welcome back to Stay4Exam!");
         let redirectUrl = res.locals.redirectUrl || "/listings";
         res.redirect( redirectUrl);
     }

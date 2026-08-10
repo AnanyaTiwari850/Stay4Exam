@@ -1,5 +1,5 @@
 {
-  "name": "nextstay",
+  "name": "Stay4Exam",
   "version": "1.0.0",
   "description": "THIS WEB APP  is similar to  Airbnb for students.\r THIS APP IS SPECIALLY FOR STUDENTS.",
   "main": "index.js",
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnanyaTiwari850/NextStay.git"
+    "url": "git+https://github.com/AnanyaTiwari850/Stay4Exam.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/AnanyaTiwari850/NextStay/issues"
+    "url": "https://github.com/AnanyaTiwari850/Stay4Exam/issues"
   },
-  "homepage": "https://github.com/AnanyaTiwari850/NextStay#readme",
+  "homepage": "https://github.com/AnanyaTiwari850/Stay4Exam#readme",
   "dependencies": {
     "connect-flash": "^0.1.1",
     "ejs": "^6.0.1",
